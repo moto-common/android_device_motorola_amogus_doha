@@ -6,7 +6,7 @@
     <integer-array name="config_virtualKeyVibePattern">
         <item>34</item>
     </integer-array>
-    <dimen name="quick_qs_offset_height">80.0px</dimen>
+    <dimen name="quick_qs_offset_height">122.0px</dimen>
     <dimen name="status_bar_height">80.0px</dimen>
     <dimen name="status_bar_height_portrait">80.0px</dimen>
     <!-- Whether device supports double tap to wake -->
