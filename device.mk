@@ -34,7 +34,6 @@ PRODUCT_COPY_FILES += \
 
 # FSTab
 PRODUCT_PACKAGES += \
-    ramdisk-fstab.amogus_doha \
     fstab.amogus_doha
 
 # Overlays
