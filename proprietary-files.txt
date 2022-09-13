@@ -19,7 +19,7 @@ vendor/etc/camera/mot_s5k5e9_chromatix.xml
 vendor/etc/camera/mot_s5kgm1sp_chromatix.xml
 
 # Firmware
-vendor/firmware/aw8695_haptic.bin
+vendor/firmware/aw8695_haptic.bin:vendor/firmware/aw8695_haptic_doha.bin
 vendor/firmware/cs48l32-dsp1-aox.wmfw
 vendor/firmware/ds_Himax_firmware.bin
 vendor/firmware/focaltech-ft8719-a0-0000-doha.bin
