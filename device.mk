@@ -36,6 +36,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.amogus_doha
 
+# Fingerprint
+TARGET_USES_EGISTEC_FINGERPRINT := true
+
 # Overlays
 PRODUCT_PACKAGES += \
     dohaFrameworkOverlay \
