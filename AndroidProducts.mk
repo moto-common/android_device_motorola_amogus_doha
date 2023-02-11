@@ -12,5 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_amogus_doha.mk
+PRODUCT_MAKEFILES := $(wildcard device/motorola/targets/devices/amogus_doha/*.mk)
+
