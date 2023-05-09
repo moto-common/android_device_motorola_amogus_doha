@@ -18,7 +18,7 @@ TARGET_IS_AMOGUS := true
 $(call inherit-product, device/motorola/amogus/device.mk)
 
 # Device path
-DEVICE_PATH := device/motorola/amogus_doha
+DEVICE_PATH := device/motorola/amogus_doha/rootdir
 
 # FSTab
 PRODUCT_PACKAGES += \
@@ -37,6 +37,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := false
 
 # Props
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/props/build_doha.prop:$(TARGET_COPY_OUT_VENDOR)/build_doha.prop
+    device/motorola/amogus_doha/props/build_doha.prop:$(TARGET_COPY_OUT_VENDOR)/build_doha.prop
 
 $(call inherit-product-if-exists, vendor/motorola/amogus_doha/amogus_doha-vendor.mk)
