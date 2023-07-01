@@ -20,12 +20,14 @@ $(call inherit-product, device/motorola/amogus/device.mk)
 # Device path
 DEVICE_PATH := device/motorola/amogus_doha/rootdir
 
-# FSTab
-PRODUCT_PACKAGES += \
-    fstab.amogus_doha
-
 # Fingerprint
 TARGET_USES_EGISTEC_FINGERPRINT := true
+
+# Kernel
+TARGET_PREBUILT_KERNEL := device/motorola/amogus-kernel/Image.gz
+
+PRODUCT_COPY_FILES += \
+    $(TARGET_PREBUILT_KERNEL):kernel
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -33,7 +35,7 @@ PRODUCT_PACKAGES += \
     dohaSystemUIOverlay
 
 # Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := false
+TARGET_USES_DYNAMIC_PARTITIONS := false
 
 # Props
 PRODUCT_COPY_FILES += \

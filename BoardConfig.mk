@@ -16,13 +16,22 @@ include device/motorola/amogus/BoardConfig.mk
 
 LOCAL_PATH := device/motorola/amogus_doha
 
+# Dtb/o
+BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/amogus-kernel/dtbs
+BOARD_PREBUILT_DTBOIMAGE := device/motorola/amogus-kernel/dtbo.img
+
+## Modules
+ifneq ($(TARGET_PREBUILT_KERNEL),)
+  BOARD_VENDOR_KERNEL_MODULES := \
+      $(wildcard device/motorola/amogus-kernel/modules/*.ko)
+endif
+
 # Partitions
 BOARD_VENDORIMAGE_PARTITION_SIZE := 620756992
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3238002688
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/vendor/etc/fstab.qcom
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 80
 
