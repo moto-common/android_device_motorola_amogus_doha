@@ -22,8 +22,11 @@ ifneq ($(BOARD_PREBUILT_DTBOIMAGE),)
   BOARD_PREBUILT_DTBOIMAGE := device/motorola/amogus-kernel/dtbo.img
 endif
 
-## Modules
+# Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
+  TARGET_PREBUILT_KERNEL := device/motorola/amogus-kernel/Image.gz
+
+## Modules
   BOARD_VENDOR_KERNEL_MODULES := \
       $(wildcard device/motorola/amogus-kernel/modules/*.ko)
 endif

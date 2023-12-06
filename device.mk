@@ -23,11 +23,6 @@ DEVICE_PATH := device/motorola/amogus_doha/rootdir
 # Fingerprint
 TARGET_USES_EGISTEC_FINGERPRINT := true
 
-# Kernel
-ifneq ($(TARGET_PREBUILT_KERNEL),)
-  TARGET_PREBUILT_KERNEL := device/motorola/amogus-kernel/Image.gz
-endif
-
 # Overlays
 PRODUCT_PACKAGES += \
     dohaFrameworkOverlay \
