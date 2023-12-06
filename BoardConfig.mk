@@ -17,8 +17,10 @@ include device/motorola/amogus/BoardConfig.mk
 LOCAL_PATH := device/motorola/amogus_doha
 
 # Dtb/o
-BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/amogus-kernel/dtbs
-BOARD_PREBUILT_DTBOIMAGE := device/motorola/amogus-kernel/dtbo.img
+ifneq ($(BOARD_PREBUILT_DTBOIMAGE),)
+  BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/amogus-kernel/dtbs
+  BOARD_PREBUILT_DTBOIMAGE := device/motorola/amogus-kernel/dtbo.img
+endif
 
 ## Modules
 ifneq ($(TARGET_PREBUILT_KERNEL),)

@@ -24,10 +24,9 @@ DEVICE_PATH := device/motorola/amogus_doha/rootdir
 TARGET_USES_EGISTEC_FINGERPRINT := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/motorola/amogus-kernel/Image.gz
-
-PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_KERNEL):kernel
+ifneq ($(TARGET_PREBUILT_KERNEL),)
+  TARGET_PREBUILT_KERNEL := device/motorola/amogus-kernel/Image.gz
+endif
 
 # Overlays
 PRODUCT_PACKAGES += \
